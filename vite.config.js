@@ -6,7 +6,6 @@ import { resolve } from "path";
 export default defineConfig(({ mode }) => {
   const { VITE_BASE_PATH } = loadEnv(mode, process.cwd());
   return {
-    publicPath: process.env.NODE_ENV === 'production' ? '/vue3-wechat-tool/': '/',
     plugins: [vue()],
     resolve: {
       // ↓路径别名，主要是这部分
