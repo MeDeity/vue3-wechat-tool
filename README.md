@@ -1,4 +1,4 @@
-<h1 align="center">在线微信对话生成器 👋</h1>
+<h1 align="center">在线微信对话生成器(触发部署) 👋</h1>
 
 > 使用 Vite + Vue3 + AntDesignVue + Pinia 搭建的在线微信对话生成器
 
