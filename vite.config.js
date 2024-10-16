@@ -2,16 +2,16 @@ import { defineConfig, loadEnv } from "vite";
 import vue from '@vitejs/plugin-vue'
 import { resolve } from "path";
 
-import cdn from 'vite-plugin-cdn-import'
+import { cdn } from "vite-plugin-cdn2";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const { VITE_BASE_PATH } = loadEnv(mode, process.cwd());
   return {
-    plugins: [vue(),
-      cdn({
-        modules: ['vue'],
-    }),,],
+    plugins: [
+      vue(),
+      cdn({ modules: ["vue"] })
+    ],
     resolve: {
       // ↓路径别名，主要是这部分
       alias: {
