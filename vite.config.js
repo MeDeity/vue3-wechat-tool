@@ -30,12 +30,12 @@ export default defineConfig(({ mode }) => {
     build: {
       chunkSizeWarningLimit: 5000, // 设置你希望的块大小警告限制，单位是字节
       rollupOptions: {
-        external: ["vue", "element-plus", "vue-demi"],
+        external: ["vue", "vue-demi"],
         plugins: [
           externalGlobals({
-            vue: "Vue",
+            vue: "vue",
             // 👇 配置 vue-demi 全局变量 👇
-            "vue-demi": "VueDemi",
+            "vue-demi": "vue-demi",
           }),
         ],
       }
