@@ -33,9 +33,9 @@ export default defineConfig(({ mode }) => {
         external: ["vue", "vue-demi"],
         plugins: [
           externalGlobals({
-            vue: "vue",
-            // 👇 配置 vue-demi 全局变量 👇
-            "vue-demi": "vue-demi",
+            vue: "Vue",
+            // 配置 vue-demi 全局变量
+            "vue-demi": "VueDemi",
           }),
         ],
       }
