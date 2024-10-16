@@ -32,10 +32,12 @@ export default defineConfig(({ mode }) => {
           main: resolve(__dirname, 'index.html'),
         },
         output: {
-          paths: {
-            vue: 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-          }
-        }
+          format: 'es',
+          globals: {
+            vue: 'Vue',
+            'vue-router': 'VueRouter',
+          },
+        },
       }
     },
   };
