@@ -4,6 +4,9 @@ import { resolve } from "path";
 
 import { cdn } from "vite-plugin-cdn2";
 
+import commonjs from 'rollup-plugin-commonjs';
+import externalGlobals from 'rollup-plugin-external-globals';
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const { VITE_BASE_PATH } = loadEnv(mode, process.cwd());
@@ -27,10 +30,13 @@ export default defineConfig(({ mode }) => {
     build: {
       chunkSizeWarningLimit: 5000, // 设置你希望的块大小警告限制，单位是字节
       rollupOptions: {
-        external: ['vue'],
-        input: {
-          main: resolve(__dirname, 'index.html'),
-        },
+        plugins: [
+          commonjs(),
+          externalGlobals({
+            vue: 'Vue',
+            'vue-router': 'VueRouter',
+          }),
+        ],
         output: {
           format: 'es',
           globals: {

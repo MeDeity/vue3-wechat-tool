@@ -1036,6 +1036,11 @@
   "resolved" "https://registry.npmmirror.com/estraverse/-/estraverse-5.3.0.tgz"
   "version" "5.3.0"
 
+"estree-walker@^0.6.1":
+  "integrity" "sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w=="
+  "resolved" "https://registry.npmjs.org/estree-walker/-/estree-walker-0.6.1.tgz"
+  "version" "0.6.1"
+
 "estree-walker@^2.0.2":
   "integrity" "sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w=="
   "resolved" "https://registry.npmmirror.com/estree-walker/-/estree-walker-2.0.2.tgz"
@@ -1165,6 +1170,13 @@
   "integrity" "sha512-Xnpx182SBMrr/aBik8y+GuR4U1L9FqMSojwDQwPMmxyC6bvEqly9UBCxhauBF5vNh2gwWJNX6oDV7O+OM4z34g=="
   "resolved" "https://registry.npmmirror.com/is-plain-object/-/is-plain-object-3.0.1.tgz"
   "version" "3.0.1"
+
+"is-reference@^1.1.2":
+  "integrity" "sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1kTPYSuqer5T9ZVBKQ=="
+  "resolved" "https://registry.npmjs.org/is-reference/-/is-reference-1.2.1.tgz"
+  "version" "1.2.1"
+  dependencies:
+    "@types/estree" "*"
 
 "is-reference@^3.0.2":
   "integrity" "sha512-v3rht/LgVcsdZa3O2Nqs+NMowLOxeOm7Ay9+/ARQ2F+qEoANRcqrjAZKGN0v8ymUetZGgkp26LTnGT7H0Qo9Pg=="
@@ -1309,6 +1321,13 @@
   dependencies:
     "yallist" "^3.0.2"
 
+"magic-string@^0.25.2":
+  "integrity" "sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ=="
+  "resolved" "https://registry.npmjs.org/magic-string/-/magic-string-0.25.9.tgz"
+  "version" "0.25.9"
+  dependencies:
+    "sourcemap-codec" "^1.4.8"
+
 "magic-string@^0.25.7":
   "integrity" "sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ=="
   "resolved" "https://registry.npmjs.org/magic-string/-/magic-string-0.25.9.tgz"
@@ -1316,7 +1335,7 @@
   dependencies:
     "sourcemap-codec" "^1.4.8"
 
-"magic-string@^0.30.0", "magic-string@^0.30.5":
+"magic-string@^0.30.0", "magic-string@^0.30.10", "magic-string@^0.30.5":
   "integrity" "sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw=="
   "resolved" "https://registry.npmjs.org/magic-string/-/magic-string-0.30.12.tgz"
   "version" "0.30.12"
@@ -1763,7 +1782,7 @@
   "resolved" "https://registry.npmmirror.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz"
   "version" "1.5.1"
 
-"resolve@^1.1.7":
+"resolve@^1.1.7", "resolve@^1.11.0":
   "integrity" "sha512-PXNdCiPqDqeUou+w1C2eTQbNfxKSuMxqTCuvlmmMsk1NWHL5fRrhY6Pl0qEYYc6+QqGClco1Qj8XnjPego4wfg=="
   "resolved" "https://registry.npmmirror.com/resolve/-/resolve-1.22.4.tgz"
   "version" "1.22.4"
@@ -1771,6 +1790,17 @@
     "is-core-module" "^2.13.0"
     "path-parse" "^1.0.7"
     "supports-preserve-symlinks-flag" "^1.0.0"
+
+"rollup-plugin-commonjs@^10.1.0":
+  "integrity" "sha512-jlXbjZSQg8EIeAAvepNwhJj++qJWNJw1Cl0YnOqKtP5Djx+fFGkp3WRh+W0ASCaFG5w1jhmzDxgu3SJuVxPF4Q=="
+  "resolved" "https://registry.npmjs.org/rollup-plugin-commonjs/-/rollup-plugin-commonjs-10.1.0.tgz"
+  "version" "10.1.0"
+  dependencies:
+    "estree-walker" "^0.6.1"
+    "is-reference" "^1.1.2"
+    "magic-string" "^0.25.2"
+    "resolve" "^1.11.0"
+    "rollup-pluginutils" "^2.8.1"
 
 "rollup-plugin-external-globals@^0.10.0":
   "integrity" "sha512-RXlupZrmn97AaaS5dWnktkjM+Iy+od0E+8L0mUkMIs3iuoUXNJebueQocQKV7Ircd54fSGGmkBaXwNzY05J1yQ=="
@@ -1782,7 +1812,24 @@
     "is-reference" "^3.0.2"
     "magic-string" "^0.30.5"
 
-"rollup@^1.20.0||^2.0.0||^3.0.0||^4.0.0", "rollup@^2.25.0 || ^3.3.0 || ^4.1.4", "rollup@^3.27.1":
+"rollup-plugin-external-globals@^0.12.0":
+  "integrity" "sha512-65Tqhh/f7hDY0qHmT4lYTVdDkY/BZU5bUQwS+SPvy6seSlACpcFRu2HzOmbLozXJS0/mOjwFyLlzJjlT2MTt8g=="
+  "resolved" "https://registry.npmjs.org/rollup-plugin-external-globals/-/rollup-plugin-external-globals-0.12.0.tgz"
+  "version" "0.12.0"
+  dependencies:
+    "@rollup/pluginutils" "^5.1.0"
+    "estree-walker" "^3.0.3"
+    "is-reference" "^3.0.2"
+    "magic-string" "^0.30.10"
+
+"rollup-pluginutils@^2.8.1":
+  "integrity" "sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ=="
+  "resolved" "https://registry.npmjs.org/rollup-pluginutils/-/rollup-pluginutils-2.8.2.tgz"
+  "version" "2.8.2"
+  dependencies:
+    "estree-walker" "^0.6.1"
+
+"rollup@^1.20.0||^2.0.0||^3.0.0||^4.0.0", "rollup@^2.25.0 || ^3.3.0 || ^4.1.4", "rollup@^3.27.1", "rollup@>=1.12.0":
   "integrity" "sha512-R9OMQmIHJm9znrU3m3cpE8uhN0fGdXiawME7aZIpQqvpS/85+Vt1Hq1/yVIcYfOmaQiHjvXkQAoJukvLpau6Yw=="
   "resolved" "https://registry.npmmirror.com/rollup/-/rollup-3.28.1.tgz"
   "version" "3.28.1"
