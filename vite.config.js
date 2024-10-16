@@ -26,6 +26,17 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       chunkSizeWarningLimit: 5000, // 设置你希望的块大小警告限制，单位是字节
+      rollupOptions: {
+        external: ['vue'],
+        input: {
+          main: resolve(__dirname, 'index.html'),
+        },
+        output: {
+          paths: {
+            vue: 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+          }
+        }
+      }
     },
   };
 });
